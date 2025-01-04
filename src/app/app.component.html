@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <app-header></app-header>
+  <style>
+    td{
+      text-align:left;
+    }
+  </style>
+  <body>
+    <table >
+      <tr *ngFor="let book of books">
+        <td style="width:30%">{{book.title}}</td>
+        <td >{{book.author}}</td>
+        <td >{{book.genre}}</td>
+        <td >{{book.pages}}</td>
+        <td >{{book.rating}}</td>
+        <td >{{book.publicationyear}}</td>
+        <td >{{book.audience}}</td>
+      </tr>
+
+    </table>
+</body>
+</html>
+
+
+ <!--loads the component based on typed in url- if /blog- blog component loaded in this space-->
+
+
+<!--<app-header></app-header>-->
+<!--<router-outlet></router-outlet>-->
+<!--<app-footer></app-footer>-->
+
+
+<!--[routerlink]="['/url']"-->
+<!--in app route - assign urls to components-->
+
