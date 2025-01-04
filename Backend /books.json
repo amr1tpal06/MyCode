@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "pages": "328",
+    "rating": "4.7",
+    "publicationyear": "1949",
+    "audience": "Adults",
+    "imagepath": "images/1984.jpg"
+  },
+  {
+    "id": 2,
+    "title": "The Maze Runner",
+    "author": "James Dashner",
+    "genre": "Dystopian",
+    "pages": "374",
+    "rating": "4.3",
+    "publicationyear": "2009",
+    "audience": "Young Adults",
+    "imagepath": "images/mazerunner.jpg"
+  },
+  {
+    "id": 3,
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "genre": "Dystopian",
+    "pages": "374",
+    "rating": "4.5",
+    "publicationyear": "2008",
+    "audience": "Young Adults",
+    "imagepath": "images/hungergames.jpg"
+  },
+  {
+    "id": 4,
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "pages": "310",
+    "rating": "4.8",
+    "publicationyear": "1937",
+    "audience": "Young Adults, Adults",
+    "imagepath": "images/hobbit.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "pages": "268",
+    "rating": "4.6",
+    "publicationyear": "1932",
+    "audience": "Adults",
+    "imagepath": "images/bravenewworld.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "genre": "Dystopian",
+    "pages": "158",
+    "rating": "4.4",
+    "publicationyear": "1953",
+    "audience": "Adults, Young Adults",
+    "imagepath": "images/fahrenheit451.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "pages": "309",
+    "rating": "4.9",
+    "publicationyear": "1997",
+    "audience": "Children, Young Adults",
+    "imagepath": "images/harrypotter1.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "genre": "Adventure",
+    "pages": "635",
+    "rating": "4.1",
+    "publicationyear": "1851",
+    "audience": "Adults",
+    "imagepath": "images/mobydick.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "pages": "279",
+    "rating": "4.6",
+    "publicationyear": "1813",
+    "audience": "Adults",
+    "imagepath": "images/prideandprejudice.jpg"
+  },
+  {
+    "id": 10,
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "pages": "423",
+    "rating": "4.9",
+    "publicationyear": "1954",
+    "audience": "Young Adults, Adults",
+    "imagepath": "images/lotr1.jpg"
+  },
+  {
+    "id": 11,
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Classic",
+    "pages": "277",
+    "rating": "4.0",
+    "publicationyear": "1951",
+    "audience": "Adults, Young Adults",
+    "imagepath": "images/catcherintherye.jpg"
+  },
+  {
+    "id": 12,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic",
+    "pages": "180",
+    "rating": "4.2",
+    "publicationyear": "1925",
+    "audience": "Adults",
+    "imagepath": "images/gatsby.jpg"
+  },
+  {
+    "id": 13,
+    "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+    "author": "C.S. Lewis",
+    "genre": "Fantasy",
+    "pages": "208",
+    "rating": "4.7",
+    "publicationyear": "1950",
+    "audience": "Children, Young Adults",
+    "imagepath": "images/narnia1.jpg"
+  },
+  {
+    "id": 14,
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "genre": "Fantasy",
+    "pages": "694",
+    "rating": "4.7",
+    "publicationyear": "1996",
+    "audience": "Adults",
+    "imagepath": "images/gameofthrones.jpg"
+  },
+  {
+    "id": 15,
+    "title": "The Outsiders",
+    "author": "S.E. Hinton",
+    "genre": "Young Adult",
+    "pages": "180",
+    "rating": "4.5",
+    "publicationyear": "1967",
+    "audience": "Young Adults",
+    "imagepath": "images/outsiders.jpg"
+  },
+  {
+    "id": 16,
+    "title": "The Shining",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "pages": "659",
+    "rating": "4.3",
+    "publicationyear": "1977",
+    "audience": "Adults",
+    "imagepath": "images/shining.jpg"
+  },
+  {
+    "id": 17,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Adventure",
+    "pages": "208",
+    "rating": "4.7",
+    "publicationyear": "1988",
+    "audience": "Adults",
+    "imagepath": "images/alchemist.jpg"
+  },
+  {
+    "id": 18,
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "genre": "Gothic",
+    "pages": "254",
+    "rating": "4.2",
+    "publicationyear": "1890",
+    "audience": "Adults",
+    "imagepath": "images/doriangray.jpg"
+  },
+  {
+    "id": 19,
+    "title": "The Night Circus",
+    "author": "Erin Morgenstern",
+    "genre": "Fantasy",
+    "pages": "387",
+    "rating": "4.4",
+    "publicationyear": "2011",
+    "audience": "Adults",
+    "imagepath": "images/nightcircus.jpg"
+  },
+  {
+    "id": 20,
+    "title": "The Secret Garden",
+    "author": "Frances Hodgson Burnett",
+    "genre": "Children's Literature",
+    "pages": "331",
+    "rating": "4.6",
+    "publicationyear": "1911",
+    "audience": "Children, Young Adults",
+    "imagepath": "images/secretgarden.jpg"
+  }
+]
