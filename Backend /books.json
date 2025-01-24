@@ -8,7 +8,9 @@
     "rating": "4.7",
     "publicationyear": "1949",
     "audience": "Adults",
-    "imagepath": "images/1984.jpg"
+    "imagepath": "assets/1984.jpg",
+    "status": "available",
+    "summary":"summary"
   },
   {
     "id": 2,
@@ -19,7 +21,9 @@
     "rating": "4.3",
     "publicationyear": "2009",
     "audience": "Young Adults",
-    "imagepath": "images/mazerunner.jpg"
+    "imagepath": "assets/mazerunner.jpg",
+    "status": "available",
+    "summary":"summary"
   },
   {
     "id": 3,
@@ -30,7 +34,9 @@
     "rating": "4.5",
     "publicationyear": "2008",
     "audience": "Young Adults",
-    "imagepath": "images/hungergames.jpg"
+    "imagepath": "assets/thehungergames.jpg",
+    "status": "available",
+    "summary":"summary"
   },
   {
     "id": 4,
@@ -40,44 +46,39 @@
     "pages": "310",
     "rating": "4.8",
     "publicationyear": "1937",
-    "audience": "Young Adults, Adults",
-    "imagepath": "images/hobbit.jpg"
+    "audience": "Young Adults",
+    "imagepath": "assets/thehobbit.webp",
+    "status": "available",
+    "summary":"summary"
   },
   {
     "id": 5,
-    "title": "Brave New World",
-    "author": "Aldous Huxley",
-    "genre": "Dystopian",
-    "pages": "268",
-    "rating": "4.6",
-    "publicationyear": "1932",
-    "audience": "Adults",
-    "imagepath": "images/bravenewworld.jpg"
-  },
-  {
-    "id": 6,
     "title": "Fahrenheit 451",
     "author": "Ray Bradbury",
     "genre": "Dystopian",
     "pages": "158",
     "rating": "4.4",
     "publicationyear": "1953",
-    "audience": "Adults, Young Adults",
-    "imagepath": "images/fahrenheit451.jpg"
+    "audience": "Young Adults",
+    "imagepath": "assets/fahrenheit451.png",
+    "status": "available",
+    "summary":"summary"
   },
   {
-    "id": 7,
-    "title": "Harry Potter and the Sorcerer's Stone",
+    "id": 6,
+    "title": "Harry Potter and the Philosopher's Stone",
     "author": "J.K. Rowling",
     "genre": "Fantasy",
     "pages": "309",
     "rating": "4.9",
     "publicationyear": "1997",
     "audience": "Children, Young Adults",
-    "imagepath": "images/harrypotter1.jpg"
+    "imagepath": "assets/harrypotterandphilosophersstone.jpg",
+    "status": "available",
+    "summary":"summary"  
   },
   {
-    "id": 8,
+    "id": 7,
     "title": "Moby-Dick",
     "author": "Herman Melville",
     "genre": "Adventure",
@@ -85,10 +86,12 @@
     "rating": "4.1",
     "publicationyear": "1851",
     "audience": "Adults",
-    "imagepath": "images/mobydick.jpg"
+    "imagepath": "assets/mobydick.jpg",
+    "status": "available",
+    "summary":"summary"
   },
   {
-    "id": 9,
+    "id": 8,
     "title": "Pride and Prejudice",
     "author": "Jane Austen",
     "genre": "Romance",
@@ -96,10 +99,12 @@
     "rating": "4.6",
     "publicationyear": "1813",
     "audience": "Adults",
-    "imagepath": "images/prideandprejudice.jpg"
+    "imagepath": "assets/prideandprejudice.jpg",
+    "status": "available"  ,
+    "summary":"summary"
   },
   {
-    "id": 10,
+    "id": 9,
     "title": "The Lord of the Rings: The Fellowship of the Ring",
     "author": "J.R.R. Tolkien",
     "genre": "Fantasy",
@@ -107,21 +112,12 @@
     "rating": "4.9",
     "publicationyear": "1954",
     "audience": "Young Adults, Adults",
-    "imagepath": "images/lotr1.jpg"
+    "imagepath": "assets/thelordoftherings.jpeg",
+    "status": "available",
+    "summary":"summary" 
   },
   {
-    "id": 11,
-    "title": "The Catcher in the Rye",
-    "author": "J.D. Salinger",
-    "genre": "Classic",
-    "pages": "277",
-    "rating": "4.0",
-    "publicationyear": "1951",
-    "audience": "Adults, Young Adults",
-    "imagepath": "images/catcherintherye.jpg"
-  },
-  {
-    "id": 12,
+    "id": 10,
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
     "genre": "Classic",
@@ -129,32 +125,12 @@
     "rating": "4.2",
     "publicationyear": "1925",
     "audience": "Adults",
-    "imagepath": "images/gatsby.jpg"
+    "imagepath": "assets/thegreatgatsby.webp",
+    "status": "available",
+    "summary":"summary"
   },
   {
-    "id": 13,
-    "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
-    "author": "C.S. Lewis",
-    "genre": "Fantasy",
-    "pages": "208",
-    "rating": "4.7",
-    "publicationyear": "1950",
-    "audience": "Children, Young Adults",
-    "imagepath": "images/narnia1.jpg"
-  },
-  {
-    "id": 14,
-    "title": "A Game of Thrones",
-    "author": "George R.R. Martin",
-    "genre": "Fantasy",
-    "pages": "694",
-    "rating": "4.7",
-    "publicationyear": "1996",
-    "audience": "Adults",
-    "imagepath": "images/gameofthrones.jpg"
-  },
-  {
-    "id": 15,
+    "id": 11,
     "title": "The Outsiders",
     "author": "S.E. Hinton",
     "genre": "Young Adult",
@@ -162,21 +138,12 @@
     "rating": "4.5",
     "publicationyear": "1967",
     "audience": "Young Adults",
-    "imagepath": "images/outsiders.jpg"
+    "imagepath": "assets/theoutsiders.jpeg",
+    "status": "available",
+    "summary":"summary"  
   },
   {
-    "id": 16,
-    "title": "The Shining",
-    "author": "Stephen King",
-    "genre": "Horror",
-    "pages": "659",
-    "rating": "4.3",
-    "publicationyear": "1977",
-    "audience": "Adults",
-    "imagepath": "images/shining.jpg"
-  },
-  {
-    "id": 17,
+    "id": 12,
     "title": "The Alchemist",
     "author": "Paulo Coelho",
     "genre": "Adventure",
@@ -184,10 +151,12 @@
     "rating": "4.7",
     "publicationyear": "1988",
     "audience": "Adults",
-    "imagepath": "images/alchemist.jpg"
+    "imagepath": "assets/thealchemist.jpeg",
+    "status": "available",
+    "summary":"summary"  
   },
   {
-    "id": 18,
+    "id": 13,
     "title": "The Picture of Dorian Gray",
     "author": "Oscar Wilde",
     "genre": "Gothic",
@@ -195,10 +164,12 @@
     "rating": "4.2",
     "publicationyear": "1890",
     "audience": "Adults",
-    "imagepath": "images/doriangray.jpg"
+    "imagepath": "assets/thepictureofdoriangray.jpeg",
+    "status": "available",
+    "summary":"summary" 
   },
   {
-    "id": 19,
+    "id": 14,
     "title": "The Night Circus",
     "author": "Erin Morgenstern",
     "genre": "Fantasy",
@@ -206,10 +177,12 @@
     "rating": "4.4",
     "publicationyear": "2011",
     "audience": "Adults",
-    "imagepath": "images/nightcircus.jpg"
+    "imagepath": "assets/thenightcircus.jpeg",
+    "status": "available",
+    "summary":"summary"
   },
   {
-    "id": 20,
+    "id": 15,
     "title": "The Secret Garden",
     "author": "Frances Hodgson Burnett",
     "genre": "Children's Literature",
@@ -217,6 +190,296 @@
     "rating": "4.6",
     "publicationyear": "1911",
     "audience": "Children, Young Adults",
-    "imagepath": "images/secretgarden.jpg"
+    "imagepath": "images/thesecretgarden.jpeg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 16,
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "genre": "Thriller, Mystery",
+    "pages": "454",
+    "rating": "4.6",
+    "publicationyear": "2003",
+    "audience": "Adults",
+    "imagepath": "assets/thedavincicode.jpg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 17,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Southern Gothic, Bildungsroman",
+    "pages": "281",
+    "rating": "4.9",
+    "publicationyear": "1960",
+    "audience": "Adults, Young Adults",
+    "imagepath": "assets/tokillamockingbird.jpg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 18,
+    "title": "One of Us Is Lying",
+    "author": "Karen M. McManus",
+    "genre": "Mystery, Young Adult Thriller",
+    "pages": "368",
+    "rating": "4.2",
+    "publicationyear": "2017",
+    "audience": "Young Adults",
+    "imagepath": "assets/oneofusislying.jpeg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 19,
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "pages": "309",
+    "rating": "4.9",
+    "publicationyear": "1997",
+    "audience": "Children, Young Adults",
+    "imagepath": "assets/harrypotterandphilosophersstone.jpg",
+    "status": "available",
+    "summary":"summary" 
+  },
+  {
+    "id": 20,
+    "title": "Little Women",
+    "author": "Louisa May Alcott",
+    "genre": "Coming-of-age, Historical Fiction",
+    "pages": "759",
+    "rating": "4.7",
+    "publicationyear": "1868",
+    "audience": "Adults, Young Adults",
+    "imagepath": "assets/littlewomen.jpg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 21,
+    "title": "Great Expectations",
+    "author": "Charles Dickens",
+    "genre": "Classic, Coming-of-Age",
+    "pages": "505",
+    "rating": "4.4",
+    "publicationyear": "1861",
+    "audience": "Adults, Young Adults",
+    "imagepath": "assets/greatexpectations.webp",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 22,
+    "title": "Lord of the Flies",
+    "author": "William Golding",
+    "genre": "Allegorical Novel, Psychological Fiction",
+    "pages": "224",
+    "rating": "4.4",
+    "publicationyear": "1954",
+    "audience": "Young Adults, Adults",
+    "imagepath": "assets/lordoftheflies.jpg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 23,
+    "title": "A Midsummer Night's Dream",
+    "author": "William Shakespeare",
+    "genre": "Comedy, Fantasy",
+    "pages": "150",
+    "rating": "4.6",
+    "publicationyear": "1595",
+    "audience": "Adults, Young Adults",
+    "imagepath": "assets/midsummernightsdream.jpeg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 24,
+    "title": "Othello",
+    "author": "William Shakespeare",
+    "genre": "Tragedy",
+    "pages": "150",
+    "rating": "4.5",
+    "publicationyear": "1603",
+    "audience": "Adults",
+    "imagepath": "assets/othello.jpeg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 25,
+    "title": "The Little Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "genre": "Novella, Fantasy",
+    "pages": "96",
+    "rating": "4.7",
+    "publicationyear": "1943",
+    "audience": "Children, Adults",
+    "imagepath": "assets/thelittleprince.webp",
+    "status": "available",
+    "summary":"summary" 
+  },
+  {
+    "id": 26,
+    "title": "The Diary of Anne Frank",
+    "author": "Anne Frank",
+    "genre": "Autobiography, Holocaust Literature",
+    "pages": "283",
+    "rating": "4.8",
+    "publicationyear": "1947",
+    "audience": "Young Adults, Adults",
+    "imagepath": "assets/diaryofannefrank.jpeg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 27,
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "genre": "Gothic, Romance",
+    "pages": "500+",
+    "rating": "4.7",
+    "publicationyear": "1847",
+    "audience": "Adults, Young Adults",
+    "imagepath": "assets/janeeyre.jpg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 28,
+    "title": "Dracula",
+    "author": "Bram Stoker",
+    "genre": "Horror, Gothic",
+    "pages": "416",
+    "rating": "4.3",
+    "publicationyear": "1897",
+    "audience": "Adults",
+    "imagepath": "assets/dracula.jpeg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 29,
+    "title": "Alice's Adventures in Wonderland",
+    "author": "Lewis Carroll",
+    "genre": "Fantasy, Children's Literature",
+    "pages": "150",
+    "rating": "4.8",
+    "publicationyear": "1865",
+    "audience": "Children, Young Adults",
+    "imagepath": "assets/aliceinwonderland.jpeg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 30,
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "genre": "Historical Fiction",
+    "pages": "1,200+",
+    "rating": "4.4",
+    "publicationyear": "1869",
+    "audience": "Adults",
+    "imagepath": "assets/warandpeace.jpeg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 31,
+    "title": "Catch-22",
+    "author": "Joseph Heller",
+    "genre": "Satire, War Fiction",
+    "pages": "453",
+    "rating": "4.4",
+    "publicationyear": "1961",
+    "audience": "Adults",
+    "imagepath": "assets/catch22.jpeg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 32,
+    "title": "Peter Pan",
+    "author": "J.M. Barrie",
+    "genre": "Fantasy, Children's Literature",
+    "pages": "250",
+    "rating": "4.7",
+    "publicationyear": "1911",
+    "audience": "Children, Young Adults",
+    "imagepath": "assets/peterpan.webp",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 33,
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "pages": "268",
+    "rating": "4.6",
+    "publicationyear": "1932",
+    "audience": "Adults",
+    "imagepath": "assets/bravenewworld.jpg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 34,
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Classic",
+    "pages": "277",
+    "rating": "4.0",
+    "publicationyear": "1951",
+    "audience": "Adults, Young Adults",
+    "imagepath": "assets/catcherintherye.jpg",
+    "status": "available",
+    "summary":"summary"  
+  },
+  {
+    "id": 35,
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "genre": "Fantasy",
+    "pages": "694",
+    "rating": "4.7",
+    "publicationyear": "1996",
+    "audience": "Adults",
+    "imagepath": "assets/gameofthrones.webp",
+    "status": "available",
+    "summary":"summary"
+  },
+  {
+    "id": 36,
+    "title": "The Shining",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "pages": "659",
+    "rating": "4.3",
+    "publicationyear": "1977",
+    "audience": "Adults",
+    "imagepath": "assets/shining.jpg",
+    "status": "available",
+    "summary":"summary"
+  },
+  {
+    "id": 37,
+    "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+    "author": "C.S. Lewis",
+    "genre": "Fantasy",
+    "pages": "208",
+    "rating": "4.7",
+    "publicationyear": "1950",
+    "audience": "Children, Young Adults",
+    "imagepath": "assets/chroniclesofnarnia.jpg",
+    "status": "available",
+    "summary":"summary"
   }
+
+
 ]
