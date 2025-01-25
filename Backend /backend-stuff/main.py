@@ -4,62 +4,60 @@ from models import Book, Author
 import json
 from sqlalchemy import func 
 
-@app.route("/borrowed", methods=["GET"])
-def get_borrowed_books():
-    borrowed_books=Book.query.filter_by(status="borrowed").all()   
-    return jsonify([book.to_json() for book in borrowed_books])
-
 @app.route("/add-book", methods=["POST"])
 def add_book():
-    # Log incoming data
     print("Incoming form data:", request.form)
 
-    # Retrieve form data
     title = request.form.get("title")
-    author = request.form.get("author")
+    author_name = request.form.get("author")
     genre = request.form.get("genre")
     pages = request.form.get("pages")
     rating = request.form.get("rating")
     publicationyear = request.form.get("publicationyear")
     audience = request.form.get("audience")
     imagepath = request.form.get("imagepath")
-    status= "available"
-    summary= "summary"
-    #onyl want to enter some of the fields and not all of them though
+    status = "available"  
+    summary = "summary"  
 
-    # Validate form data
-    if not all([title, author, genre, pages, rating, publicationyear, audience, imagepath, status, summary]):
+    if not all([title, author_name, genre, pages, rating, publicationyear, audience, imagepath]):
         print("Missing fields detected!")
-        return jsonify({"error": "All fields are required"}), 400
+        return jsonify({"error": "All required fields must be provided."}), 400
 
-    # Log data after validation
-    print("Validated data:", title, author, genre, pages, rating, publicationyear, audience, imagepath, status, summary)
+    authorset = Author.query.filter_by(name=author_name).first()
+    if not authorset:
+        authorset = Author(name=author_name)
+        db.session.add(authorset)
+        db.session.commit()  
 
-    # Create a new Book instance
+    # Log validated data for debugging purposes
+    print("Validated data:", title, authorset.name, genre, pages, rating, publicationyear, audience, imagepath, status, summary)
+
     try:
-        book = Book(
+        new_book = Book(
             title=title,
-            author=author,
+            author=authorset,  
             genre=genre,
             pages=pages,
             rating=rating,
             publicationyear=publicationyear,
             audience=audience,
             imagepath=imagepath,
-            status= status,
+            status=status,
             summary=summary
         )
-        
-        # Add the book to the database
-        db.session.add(book)
+
+        db.session.add(new_book)
         db.session.commit()
         print("Book added successfully!")
+
         return jsonify({"message": "Book added successfully!"}), 201
+
     except Exception as e:
-        # Catch and log database errors
+        # Handle errors (e.g., database issues)
         print("Error while adding book:", str(e))
-        db.session.rollback()
+        db.session.rollback()  # Rollback session in case of error
         return jsonify({"error": str(e)}), 500
+
 
 @app.route('/delete-book/<int:book_id>', methods=['DELETE'])
 def delete_book(book_id):
@@ -157,6 +155,11 @@ def get_values(category):
     values_list = [getattr(value, category) for value in values]
     return jsonify(values_list)
 
+@app.route("/borrowed", methods=["GET"])
+def get_borrowed_books():
+    borrowed_books = Book.query.filter_by(status="borrowed").all()
+    return jsonify([book.to_json() for book in borrowed_books])
+
 @app.route("/filter-by/<string:category>/<string:encodedUserinput>", methods=["GET"])
 def filter_by(category, encodedUserinput):
    filter_condition = getattr(Book, category) == encodedUserinput
@@ -177,12 +180,7 @@ def view_books():
     db.session.commit()
 
     for book in books_data:
-        # Check if a book with the same title and author already exists
-        
         existing_book = Book.query.filter_by(title=book["title"]).first()
-        if existing_book:
-            print(f"Book '{book['title']}' already exists.")
-            continue 
         author = Author.query.filter_by(name=book["author"]).first()
 
         # Add new book if it doesn't already exist
