@@ -1,16 +1,8 @@
 from flask import request, jsonify
 from config import app, db
-from models import Book
+from models import Book, Author
 import json
 from sqlalchemy import func 
-
-#@app.route("/add-rating/<int:book_id>", methods=["PATCH"])
-#def add_rating(book_id):
- #   book = Book.query.get(book_id)
- #   rating = from the http request, dont know what it is though
- #   book.rating =book.rating +rating//2
- #   db.session.commit()
- #   return jsonify({"message": f"Rating for book with id {book_id} updated successfully!"}), 200
 
 @app.route("/borrowed", methods=["GET"])
 def get_borrowed_books():
@@ -174,19 +166,29 @@ def filter_by(category, encodedUserinput):
 @app.route("/", methods=["GET"])
 def view_books():
     with open('/Users/amrit/Desktop/MyCode/Backend /books.json', 'r') as file:
-        books_data = json.load(file)
+        data = json.load(file)
+
+    author_data=data["authors"]
+    books_data=data["books"]
     
+    for author in author_data:
+        new_author= Author(name=author)
+        db.session.add(new_author)
+    db.session.commit()
+
     for book in books_data:
         # Check if a book with the same title and author already exists
-        existing_book = Book.query.filter_by(title=book["title"], author=book["author"]).first()
-        if existing_book:
-            print(f"Book '{book['title']}' by {book['author']} already exists. Skipping.")
-            continue
         
+        existing_book = Book.query.filter_by(title=book["title"]).first()
+        if existing_book:
+            print(f"Book '{book['title']}' already exists.")
+            continue 
+        author = Author.query.filter_by(name=book["author"]).first()
+
         # Add new book if it doesn't already exist
         new_book = Book(
             title=book["title"],
-            author=book["author"],
+            author=author, #author
             genre=book["genre"],
             pages=book["pages"],
             rating=book["rating"],
@@ -204,7 +206,6 @@ def view_books():
     json_books = [book.to_json() for book in books]
     return jsonify(json_books)
 
-
 @app.route("/<int:book_id>", methods =["GET"])
 def getbook(book_id):
     #code to get specific book by id 
@@ -218,3 +219,4 @@ def test_post():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
+
