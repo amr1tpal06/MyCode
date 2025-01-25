@@ -137,7 +137,7 @@ def get_highest():
             'title': highest.title,
             'author': highest.author,
             'rating': highest.rating
-        })
+        }) 
     else:
         return jsonify({'message': 'No books found in the database'})
 
