@@ -1,4 +1,4 @@
-[
+{"books":[
   {
     "id": 1,
     "title": "1984",
@@ -482,4 +482,43 @@
   }
 
 
-]
+],
+
+  "authors": [
+    "George Orwell",
+    "James Dashner",
+    "Suzanne Collins",
+    "J.R.R. Tolkien",
+    "Ray Bradbury",
+    "J.K. Rowling",
+    "Herman Melville",
+    "Jane Austen",
+    "F. Scott Fitzgerald",
+    "S.E. Hinton",
+    "Paulo Coelho",
+    "Oscar Wilde",
+    "Erin Morgenstern",
+    "Frances Hodgson Burnett",
+    "Dan Brown",
+    "Harper Lee",
+    "Karen M. McManus",
+    "Louisa May Alcott",
+    "Charles Dickens",
+    "William Golding",
+    "William Shakespeare",
+    "Antoine de Saint-Exupéry",
+    "Anne Frank",
+    "Charlotte Brontë",
+    "Bram Stoker",
+    "Lewis Carroll",
+    "Leo Tolstoy",
+    "Joseph Heller",
+    "J.M. Barrie",
+    "Aldous Huxley",
+    "J.D. Salinger",
+    "George R.R. Martin",
+    "Stephen King",
+    "C.S. Lewis"
+  ]
+
+}

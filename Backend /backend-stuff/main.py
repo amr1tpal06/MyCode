@@ -3,13 +3,14 @@ from config import app, db
 from models import Book, Author
 import json
 from sqlalchemy import func 
+#filtering - books - mutiples (view_books), add book not working
 
 @app.route("/add-book", methods=["POST"])
 def add_book():
     print("Incoming form data:", request.form)
 
     title = request.form.get("title")
-    author_name = request.form.get("author")
+    author = request.form.get("author")
     genre = request.form.get("genre")
     pages = request.form.get("pages")
     rating = request.form.get("rating")
@@ -19,13 +20,13 @@ def add_book():
     status = "available"  
     summary = "summary"  
 
-    if not all([title, author_name, genre, pages, rating, publicationyear, audience, imagepath]):
+    if not all([title, author, genre, pages, rating, publicationyear, audience, imagepath]):
         print("Missing fields detected!")
         return jsonify({"error": "All required fields must be provided."}), 400
 
-    authorset = Author.query.filter_by(name=author_name).first()
+    authorset = Author.query.filter_by(name=author).first()
     if not authorset:
-        authorset = Author(name=author_name)
+        authorset = Author(name=author)
         db.session.add(authorset)
         db.session.commit()  
 
@@ -166,7 +167,7 @@ def filter_by(category, encodedUserinput):
    items = Book.query.filter(filter_condition).all()
    return jsonify([item.to_json() for item in items]) 
 
-@app.route("/", methods=["GET"])
+@app.route("/", methods=["GET"]) #sort out adding authors and adding books
 def view_books():
     with open('/Users/amrit/Desktop/MyCode/Backend /books.json', 'r') as file:
         data = json.load(file)
@@ -175,28 +176,32 @@ def view_books():
     books_data=data["books"]
     
     for author in author_data:
-        new_author= Author(name=author)
-        db.session.add(new_author)
-    db.session.commit()
+        checkauthor = Author.query.filter_by(name=author).first()    
+        if not checkauthor: 
+            new_author= Author(name=author)
+            db.session.add(new_author)
+        db.session.commit()
+    #all authors are in database
 
     for book in books_data:
         existing_book = Book.query.filter_by(title=book["title"]).first()
-        author = Author.query.filter_by(name=book["author"]).first()
+        getauthor = Author.query.filter_by(name=book["author"]).first()  
 
-        # Add new book if it doesn't already exist
-        new_book = Book(
-            title=book["title"],
-            author=author, #author
-            genre=book["genre"],
-            pages=book["pages"],
-            rating=book["rating"],
-            publicationyear=book["publicationyear"],
-            audience=book["audience"],
-            imagepath=book["imagepath"],
-            status=book["status"],
-            summary=book["summary"]
-        )
-        db.session.add(new_book)
+        if not existing_book:
+            # Add new book if it doesn't already exist
+            new_book = Book(
+                title=book["title"],
+                author=getauthor, #author
+                genre=book["genre"],
+                pages=book["pages"],
+                rating=book["rating"],
+                publicationyear=book["publicationyear"],
+                audience=book["audience"],
+                imagepath=book["imagepath"],
+                status=book["status"],
+                summary=book["summary"]
+            )
+            db.session.add(new_book)
     db.session.commit()
 
     # Fetch all books to display
