@@ -519,6 +519,100 @@
     "George R.R. Martin",
     "Stephen King",
     "C.S. Lewis"
-  ]
-
+  ], 
+    "genres": [
+      {
+        "name": "Dystopian",
+        "description": "A genre that explores societies characterized by extreme levels of control, surveillance, or oppression."
+      },
+      {
+        "name": "Fantasy",
+        "description": "A genre that involves magical or supernatural elements and often takes place in imaginary worlds."
+      },
+      {
+        "name": "Adventure",
+        "description": "A genre that focuses on exciting, risky, and often dangerous experiences or journeys."
+      },
+      {
+        "name": "Romance",
+        "description": "A genre centered on romantic relationships, typically focusing on love and emotional connections."
+      },
+      {
+        "name": "Classic",
+        "description": "A genre that refers to timeless and widely recognized works of literature."
+      },
+      {
+        "name": "Young Adult",
+        "description": "A genre that targets a young adult audience, often featuring teenage protagonists facing emotional or social struggles."
+      },
+      {
+        "name": "Gothic",
+        "description": "A genre that often includes dark, mysterious settings with themes of horror, decay, and the supernatural."
+      },
+      {
+        "name": "Thriller",
+        "description": "A genre that uses suspense, tension, and excitement to keep readers on edge, often involving crime or danger."
+      },
+      {
+        "name": "Mystery",
+        "description": "A genre focused on solving a crime, puzzle, or enigma, typically through investigation or detective work."
+      },
+      {
+        "name": "Southern Gothic",
+        "description": "A genre that includes elements of gothic fiction, often set in the American South, with themes of decay and social issues."
+      },
+      {
+        "name": "Bildungsroman",
+        "description": "A genre focused on the coming-of-age story, following the protagonist's personal growth and development."
+      },
+      {
+        "name": "Allegorical Novel",
+        "description": "A genre in which characters, events, or settings symbolize deeper moral, political, or philosophical meanings."
+      },
+      {
+        "name": "Psychological Fiction",
+        "description": "A genre that explores the psychological and emotional states of characters, often focusing on inner conflicts."
+      },
+      {
+        "name": "Comedy",
+        "description": "A genre that emphasizes humor, often with lighthearted or satirical themes."
+      },
+      {
+        "name": "Tragedy",
+        "description": "A genre that explores human suffering, often with a dark, serious tone and inevitable downfall of characters."
+      },
+      {
+        "name": "Novella",
+        "description": "A shorter form of fiction, often more focused in scope than a full-length novel."
+      },
+      {
+        "name": "Autobiography",
+        "description": "A genre where the author tells the story of their own life, often from a personal perspective."
+      },
+      {
+        "name": "Holocaust Literature",
+        "description": "A genre that deals with the historical events of the Holocaust, often focusing on survivors' stories and memories."
+      },
+      {
+        "name": "Horror",
+        "description": "A genre intended to provoke fear, dread, and suspense, often featuring supernatural or grotesque elements."
+      },
+      {
+        "name": "Historical Fiction",
+        "description": "A genre that takes place in the past, often blending fictional events with historical settings."
+      },
+      {
+        "name": "Satire",
+        "description": "A genre that uses humor, irony, and exaggeration to criticize or mock societal norms or issues."
+      },
+      {
+        "name": "War Fiction",
+        "description": "A genre that deals with the effects and experiences of war, often focusing on soldiers and their emotional struggles."
+      },
+      {
+        "name": "Coming-of-age",
+        "description": "A genre that centers around a character's transition from youth to adulthood, often dealing with personal challenges."
+      }
+    ]
+    
 }

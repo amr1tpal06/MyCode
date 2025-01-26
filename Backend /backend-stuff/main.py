@@ -1,9 +1,10 @@
 from flask import request, jsonify
 from config import app, db
-from models import Book, Author
+from models import Book, Author, Genre
 import json
 from sqlalchemy import func 
 # add book not working, app.route("/edit-book",methods=[POST]), stats, testing and document 
+# now just code, i think- recap databases etc and logic and then do 
 
 @app.route("/add-book", methods=["POST"])
 def add_book():
@@ -130,11 +131,11 @@ def get_highest():
     else:
         return jsonify({'message': 'No books found in the database'})
 
-@app.route("/books-by-genre", methods=["GET"])
+'''@app.route("/books-by-genre", methods=["GET"])
 def books_by_genre():
     genre_count = db.session.query(Book.genre, func.count(Book.id)).group_by(Book.genre).all()
     genre_list = [{genre: count} for genre, count in genre_count]
-    return jsonify(genre_list)
+    return jsonify(genre_list)'''
 
 
 @app.route("/books-by-author", methods=["GET"])
@@ -178,42 +179,51 @@ def view_books():
     with open('/Users/amrit/Desktop/MyCode/Backend /books.json', 'r') as file:
         data = json.load(file)
 
-    author_data=data["authors"]
-    books_data=data["books"]
+    author_data = data["authors"]
+    books_data = data["books"]
+    genre_data = data["genres"]
+
+    for genre in genre_data:
+        checkgenre = Genre.query.filter_by(genre=genre["name"]).first()    
+        if not checkgenre: 
+            new_genre = Genre(genre=genre["name"], description=genre["description"])
+            db.session.add(new_genre)
+        db.session.commit()
     
     for author in author_data:
         checkauthor = Author.query.filter_by(name=author).first()    
         if not checkauthor: 
-            new_author= Author(name=author)
+            new_author = Author(name=author)
             db.session.add(new_author)
         db.session.commit()
-    #all authors are in database
 
     for book in books_data:
         existing_book = Book.query.filter_by(title=book["title"]).first()
-        getauthor = Author.query.filter_by(name=book["author"]).first()  
+        getauthor = Author.query.filter_by(name=book["author"]).first()
+        getgenre = Genre.query.filter_by(genre=book["genre"]).first()
 
         if not existing_book:
-            # Add new book if it doesn't already exist
-            new_book = Book(
-                title=book["title"],
-                author=getauthor, #author
-                genre=book["genre"],
-                pages=book["pages"],
-                rating=book["rating"],
-                publicationyear=book["publicationyear"],
-                audience=book["audience"],
-                imagepath=book["imagepath"],
-                status=book["status"],
-                summary=book["summary"]
-            )
-            db.session.add(new_book)
+            if getauthor and getgenre:
+                new_book = Book(
+                    title=book["title"],
+                    author_id=getauthor,  
+                    genre_id=getgenre,    
+                    pages=book["pages"],
+                    rating=book["rating"],
+                    publicationyear=book["publicationyear"],
+                    audience=book["audience"],
+                    imagepath=book["imagepath"],
+                    status=book["status"],
+                    summary=book["summary"]
+                )
+                db.session.add(new_book)
     db.session.commit()
 
     # Fetch all books to display
     books = Book.query.filter_by(status="available").all()
     json_books = [book.to_json() for book in books]
     return jsonify(json_books)
+
 
 @app.route("/<int:book_id>", methods =["GET"])
 def getbook(book_id):
