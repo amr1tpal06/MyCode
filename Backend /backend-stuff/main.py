@@ -3,14 +3,13 @@ from config import app, db
 from models import Book, Author
 import json
 from sqlalchemy import func 
-#filtering - books - mutiples (view_books), add book not working
+# add book not working, app.route("/edit-book",methods=[POST]), stats, testing and document 
 
 @app.route("/add-book", methods=["POST"])
 def add_book():
     print("Incoming form data:", request.form)
-
     title = request.form.get("title")
-    author = request.form.get("author")
+    author = request.form.get("author") #string 
     genre = request.form.get("genre")
     pages = request.form.get("pages")
     rating = request.form.get("rating")
@@ -24,19 +23,18 @@ def add_book():
         print("Missing fields detected!")
         return jsonify({"error": "All required fields must be provided."}), 400
 
-    authorset = Author.query.filter_by(name=author).first()
-    if not authorset:
-        authorset = Author(name=author)
-        db.session.add(authorset)
+    author_set = Author.query.filter_by(name=author).first()
+    if not author_set:
+        author_set = Author(name=author)
+        db.session.add(author_set)
         db.session.commit()  
-
-    # Log validated data for debugging purposes
-    print("Validated data:", title, authorset.name, genre, pages, rating, publicationyear, audience, imagepath, status, summary)
+    
+    print("Validated data:", title, author_set.name, genre, pages, rating, publicationyear, audience, imagepath, status, summary)
 
     try:
         new_book = Book(
             title=title,
-            author=authorset,  
+            author=author_set,  
             genre=genre,
             pages=pages,
             rating=rating,
@@ -88,7 +86,7 @@ def least_pages():
     if leastpages:
         return jsonify({
             'title': leastpages.title,
-            'author': leastpages.author,
+            'author': leastpages.author.name,
             'rating': leastpages.rating
         })
     else:
@@ -101,7 +99,7 @@ def most_pages():
     if mostpages:
         return jsonify({
             'title': mostpages.title,
-            'author': mostpages.author,
+            'author': mostpages.author.name,
             'rating': mostpages.rating
         })
     else:
@@ -114,7 +112,7 @@ def get_lowest():
     if lowest:
         return jsonify({
             'title': lowest.title,
-            'author': lowest.author,
+            'author':lowest.author.name,
             'rating': lowest.rating
         })
     else:
@@ -126,7 +124,7 @@ def get_highest():
     if highest:
         return jsonify({
             'title': highest.title,
-            'author': highest.author,
+            'author': highest.author.name,
             'rating': highest.rating
         }) 
     else:
@@ -138,11 +136,19 @@ def books_by_genre():
     genre_list = [{genre: count} for genre, count in genre_count]
     return jsonify(genre_list)
 
-@app.route ("/books-by-author", methods =["GET"])
+
+@app.route("/books-by-author", methods=["GET"])
 def books_by_author():
-    author_count= db.session.query(Book.author, func.count(Book.id)).group_by(Book.author).all()
-    author_list= [{author: count} for author, count in author_count]
-    return jsonify (author_list)
+    author_count = (
+        db.session.query(Author.name, func.count(Book.id))
+        .join(Book, Book.author_id == Author.id)
+        .group_by(Author.name)
+        .all()
+    )
+
+    author_list = [{"author": author, "count": count} for author, count in author_count]
+    return jsonify(author_list)
+
 
 @app.route("/attributes", methods=["GET"])
 def get_attributes():
