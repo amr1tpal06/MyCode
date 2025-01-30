@@ -131,12 +131,14 @@ def get_highest():
     else:
         return jsonify({'message': 'No books found in the database'})
 
-'''@app.route("/books-by-genre", methods=["GET"])
+@app.route("/books-by-genre", methods=["GET"])
 def books_by_genre():
-    genre_count = db.session.query(Book.genre, func.count(Book.id)).group_by(Book.genre).all()
-    genre_list = [{genre: count} for genre, count in genre_count]
-    return jsonify(genre_list)'''
-
+    genres = Genre.query.all() 
+    genre_list = []
+    for genre in genres:
+        books = [{"title": book.title} for book in genre.books]
+        genre_list.append({"books": books,"genre": genre.genre})
+    return jsonify(genre_list)
 
 @app.route("/books-by-author", methods=["GET"])
 def books_by_author():
