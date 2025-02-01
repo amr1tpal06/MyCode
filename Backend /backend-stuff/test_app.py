@@ -17,7 +17,7 @@ def setup():
         db.create_all() 
     yield db
 
-def test_add_book(setup):
+def test_addanddeletebook(setup):
     new_book = Book(
         title="sample title", 
         author_id=1, 
@@ -52,3 +52,25 @@ def test_return_book():
         book.status="returned"
         db.session.commit()
         assert book.status=="returned"
+
+def test_addanddeleteauthor(setup):
+    new_author = Author(name="sample author")
+    with app.app_context():
+        db.session.add(new_author)
+        db.session.commit()
+
+        author=Author.query.filter_by(name="sample author").first()
+        assert author.name=="sample author"
+        db.session.delete(new_author)
+        db.session.commit()
+
+def test_addanddeletegenre(setup):
+    new_genre = Genre(genre="sample genre", description="sample description")
+    with app.app_context():
+        db.session.add(new_genre)
+        db.session.commit()
+
+        genre=Genre.query.filter_by(genre="sample genre").first()
+        assert genre.genre=="sample genre"
+        db.session.delete(new_genre)
+        db.session.commit()
