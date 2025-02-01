@@ -5,6 +5,7 @@ import json
 from models import Book, Author, Genre
 import os
 import pytest
+import random
 
 @pytest.fixture
 def setup():
@@ -74,3 +75,9 @@ def test_addanddeletegenre(setup):
         assert genre.genre=="sample genre"
         db.session.delete(new_genre)
         db.session.commit()
+
+def test_getbook(setup):
+    with app.app_context():
+        book_id=random.randint(1,len(Book.query.all()))
+        book=Book.query.get(book_id)
+        assert book.id==book_id
