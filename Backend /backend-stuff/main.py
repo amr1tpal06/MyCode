@@ -3,8 +3,7 @@ from config import app, db
 from models import Book, Author, Genre
 import json
 from sqlalchemy import func 
-# add book not working, app.route("/edit-book",methods=[POST]), stats, testing and document 
-# now just code, i think- recap databases etc and logic and then do 
+#add book not working, filtering not working, testing, documentation (then add functionalities)
 
 @app.route("/add-book", methods=["POST"])
 def add_book():
@@ -30,13 +29,19 @@ def add_book():
         db.session.add(author_set)
         db.session.commit()  
     
-    print("Validated data:", title, author_set.name, genre, pages, rating, publicationyear, audience, imagepath, status, summary)
+    genre_set = Genre.query.filter_by(genre=genre).first()
+    if not genre:
+        genre_set = Author(genre=genre, description="sample description")
+        db.session.add(genre_set)
+        db.session.commit()  
+    
+    print("Validated data:", title, author_set.name, genre_set.genre, pages, rating, publicationyear, audience, imagepath, status, summary)
 
     try:
         new_book = Book(
             title=title,
             author=author_set,  
-            genre=genre,
+            genre=genre_set,
             pages=pages,
             rating=rating,
             publicationyear=publicationyear,
@@ -70,6 +75,7 @@ def delete_book(book_id):
 def borrow_book(book_id):
     book = Book.query.get(book_id)
     book.status = "borrowed"
+    #book.borrowed= book.borrowed+1
     db.session.commit()
     return jsonify({"message": f"Book with id {book_id} borrowed successfully!"}), 200
 
@@ -160,21 +166,31 @@ def get_attributes():
 
 @app.route("/<string:category>", methods=["GET"])
 def get_values(category):
-    column = getattr(Book, category)
-    values = db.session.query(column).distinct().all()
-    values_list = [getattr(value, category) for value in values]
+    if category == "author":
+        # Query the distinct authors
+        authors = db.session.query(Author.name).distinct().all()
+        values_list = [author[0] for author in authors]  # Extract name from tuple
+    elif category == "genre":
+        # Query the distinct genres
+        genres = db.session.query(Genre.genre).distinct().all()
+        values_list = [genre[0] for genre in genres]
+    else:
+        column = getattr(Book, category)
+        values = db.session.query(column).distinct().all()
+        values_list = [getattr(value, category) for value in values]
     return jsonify(values_list)
-
-@app.route("/borrowed", methods=["GET"])
-def get_borrowed_books():
-    borrowed_books = Book.query.filter_by(status="borrowed").all()
-    return jsonify([book.to_json() for book in borrowed_books])
 
 @app.route("/filter-by/<string:category>/<string:encodedUserinput>", methods=["GET"])
 def filter_by(category, encodedUserinput):
    filter_condition = getattr(Book, category) == encodedUserinput
    items = Book.query.filter(filter_condition).all()
    return jsonify([item.to_json() for item in items]) 
+
+
+@app.route("/borrowed", methods=["GET"])
+def get_borrowed_books():
+    borrowed_books = Book.query.filter_by(status="borrowed").all()
+    return jsonify([book.to_json() for book in borrowed_books])
 
 @app.route("/", methods=["GET"]) #sort out adding authors and adding books
 def view_books():
@@ -208,8 +224,8 @@ def view_books():
             if getauthor and getgenre:
                 new_book = Book(
                     title=book["title"],
-                    author_id=getauthor,  
-                    genre_id=getgenre,    
+                    author_id=getauthor.id,  
+                    genre_id=getgenre.id,    
                     pages=book["pages"],
                     rating=book["rating"],
                     publicationyear=book["publicationyear"],
@@ -241,3 +257,11 @@ def test_post():
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
 
+"""@app.route("/rate", methods=["POST"])
+def rate_book():
+    new_rating = 0
+    book='book entered by user'
+    rating=Book.query.get("rating")
+    new_rating = (rating+userrating) // 2
+    Book.rating= new_rating
+    db.session.commit()  """

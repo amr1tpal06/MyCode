@@ -1,5 +1,4 @@
 from config import db
-
 class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
@@ -51,5 +50,4 @@ class Genre(db.Model):
         }
 
 #one book has one author, but one author can have many books - one to many (author to book)
-#one genre can have many books, one book can have many genres - many to many (genre to book)
-#one genre can have many books, but a book can have one genre 
+#one genre can have many books, one genre can have many books - one to many (book to genre)

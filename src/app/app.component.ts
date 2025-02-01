@@ -5,13 +5,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [MatButtonModule, MatToolbarModule, MatCardModule, HttpClientModule, CommonModule, HeaderComponent],
+  imports: [MatButtonModule, MatToolbarModule, MatCardModule, HttpClientModule, CommonModule],
   standalone: true,
 })
 export class AppComponent implements OnInit { //something wrong with this code
