@@ -36,6 +36,8 @@ def test_add_book(setup):
 
         book=Book.query.filter_by(title="sample title").first()
         assert book.title=="sample title"
+        db.session.delete(new_book)
+        db.session.commit()
 
 def test_borrow_book():
     with app.app_context():
