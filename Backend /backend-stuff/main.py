@@ -3,8 +3,7 @@ from config import app, db
 from models import Book, Author, Genre
 import json
 from sqlalchemy import func 
-#add book not working, filtering not working, testing, documentation (then add functionalities)
-
+    
 @app.route("/add-book", methods=["POST"])
 def add_book():
     print("Incoming form data:", request.form)
@@ -146,6 +145,17 @@ def books_by_genre():
         genre_list.append({"books": books,"genre": genre.genre})
     return jsonify(genre_list)
 
+@app.route("/books-by-audience", methods=["GET"])
+def books_by_audience():
+    audience_count = (
+        db.session.query(Book.audience, func.count(Book.id))
+        .group_by(Book.audience)
+        .all()
+    )
+    audience_list = [{"audience": audience, "count": count} for audience, count in audience_count]
+    return jsonify(audience_list)
+
+
 @app.route("/books-by-author", methods=["GET"])
 def books_by_author():
     author_count = (
@@ -158,6 +168,15 @@ def books_by_author():
     author_list = [{"author": author, "count": count} for author, count in author_count]
     return jsonify(author_list)
 
+@app.route("/books-by-status", methods=["GET"])
+def books_by_status():
+    borrowed_count = (
+        db.session.query(Book.status, func.count(Book.id))
+        .group_by(Book.status)
+        .all()
+    )
+    borrowed_list = [{"status": status, "count": count} for status, count in borrowed_count]
+    return jsonify(borrowed_list)
 
 @app.route("/attributes", methods=["GET"])
 def get_attributes():
@@ -256,12 +275,3 @@ def test_post():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
-
-"""@app.route("/rate", methods=["POST"])
-def rate_book():
-    new_rating = 0
-    book='book entered by user'
-    rating=Book.query.get("rating")
-    new_rating = (rating+userrating) // 2
-    Book.rating= new_rating
-    db.session.commit()  """
