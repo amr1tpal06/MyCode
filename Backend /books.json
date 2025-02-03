@@ -10,7 +10,7 @@
     "audience": "Adults",
     "imagepath": "assets/1984.jpg",
     "status": "available",
-    "summary":"summary"
+    "summary":"Set in a dystopian society ruled by totalitarian government, 1984 follows Winston Smith as he navigates a world of oppression, surveillance, and propaganda. As Winston questions the Party's control, he risks his life to explore forbidden thoughts and a rebellious love affair, leading to a tragic realization of the extent of the regime's power."
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
     "audience": "Young Adults",
     "imagepath": "assets/mazerunner.jpg",
     "status": "available",
-    "summary":"summary"
+    "summary":"In a post-apocalyptic world, a group of teenagers is trapped in a mysterious maze with no memory of how they arrived. Thomas, the protagonist, becomes entangled in their efforts to escape, facing deadly creatures, and uncovering secrets that may change the fate of humanity."
   },
   {
     "id": 3,
@@ -36,7 +36,7 @@
     "audience": "Young Adults",
     "imagepath": "assets/thehungergames.jpg",
     "status": "available",
-    "summary":"summary"
+    "summary":"Set in a dystopian future, The Hunger Games follows Katniss Everdeen, a young girl who volunteers to take her sister's place in a deadly televised competition. As Katniss navigates the brutal games, she becomes a symbol of resistance and rebellion against the oppressive Capitol."
   },
   {
     "id": 4,
@@ -49,7 +49,7 @@
     "audience": "Young Adults",
     "imagepath": "assets/thehobbit.webp",
     "status": "available",
-    "summary":"summary"
+    "summary":"Bilbo Baggins, a hobbit, is swept into an epic adventure when he joins a group of dwarves on a quest to reclaim their homeland from the dragon Smaug. Along the way, Bilbo encounters trolls, goblins, and a mysterious creature named Gollum, testing his courage and resourcefulness."
   },
   {
     "id": 5,
@@ -62,7 +62,7 @@
     "audience": "Young Adults",
     "imagepath": "assets/fahrenheit451.png",
     "status": "available",
-    "summary":"summary"
+    "summary":"In a society where books are banned and critical thought is suppressed, fireman Guy Montag is tasked with burning any remaining literature. However, as Montag questions the status quo, he embarks on a dangerous journey to preserve knowledge and challenge the oppressive regime."
   },
   {
     "id": 6,
@@ -75,7 +75,7 @@
     "audience": "Children, Young Adults",
     "imagepath": "assets/harrypotterandphilosophersstone.jpg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"Harry Potter, a young boy raised by neglectful relatives, discovers he is a wizard on his 11th birthday. At Hogwarts School of Witchcraft and Wizardry, Harry makes friends, unravels the mystery of his parents' death, and confronts the dark wizard Voldemort in his quest for the Philosopher's Stone."  
   },
   {
     "id": 7,
@@ -88,7 +88,7 @@
     "audience": "Adults",
     "imagepath": "assets/mobydick.jpg",
     "status": "available",
-    "summary":"summary"
+    "summary":"The novel follows Ishmael, a sailor who joins the whaling ship Pequod led by the obsessive Captain Ahab. Ahab's singular focus is to hunt down the legendary white whale, Moby Dick, leading to a journey filled with existential reflection, danger, and a tragic outcome."
   },
   {
     "id": 8,
@@ -101,7 +101,7 @@
     "audience": "Adults",
     "imagepath": "assets/prideandprejudice.jpg",
     "status": "available"  ,
-    "summary":"summary"
+    "summary":"Pride and Prejudice centers on Elizabeth Bennet and her evolving relationship with the aloof Mr. Darcy. The novel explores themes of love, social expectations, and the prejudices that shape human behavior, leading to a deeper understanding of self and others."
   },
   {
     "id": 9,
@@ -114,7 +114,7 @@
     "audience": "Young Adults, Adults",
     "imagepath": "assets/thelordoftherings.jpeg",
     "status": "available",
-    "summary":"summary" 
+    "summary":"Frodo Baggins is entrusted with the task of destroying the One Ring, an ancient artifact with the power to rule the world. Joined by a fellowship of friends and allies, Frodo embarks on an epic journey through Middle-earth, facing dangerous enemies and temptations along the way." 
   },
   {
     "id": 10,
@@ -127,7 +127,7 @@
     "audience": "Adults",
     "imagepath": "assets/thegreatgatsby.webp",
     "status": "available",
-    "summary":"summary"
+    "summary":"Set during the Roaring Twenties, The Great Gatsby tells the story of Jay Gatsby, a wealthy and mysterious man who throws extravagant parties at his mansion in West Egg. Through the eyes of Nick Carraway, a young man who moves in next door, the novel explores Gatsby's obsessive love for Daisy Buchanan, a woman he met and fell in love with years earlier. Gatsby's relentless pursuit of Daisy, despite her marriage to Tom Buchanan, leads to tragedy. The book delves into themes of love, wealth, class, and the American Dream, offering a critique of the illusions people chase."
   },
   {
     "id": 11,
@@ -140,7 +140,7 @@
     "audience": "Young Adults",
     "imagepath": "assets/theoutsiders.jpeg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"The Outsiders is the story of Ponyboy Curtis, a 14-year-old boy growing up in a lower-class neighborhood in Tulsa, Oklahoma. Ponyboy belongs to a group of friends known as the Greasers, who often clash with the wealthier Socs. The novel chronicles Ponyboy's struggles with identity, class conflict, and family. After a violent altercation with a Soc named Bob, Ponyboy and his friend Johnny run away, leading to a series of tragic events. The story explores themes of friendship, loyalty, and the search for belonging."  
   },
   {
     "id": 12,
@@ -153,46 +153,47 @@
     "audience": "Adults",
     "imagepath": "assets/thealchemist.jpeg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"The story follows Santiago, a young shepherd from Spain, on a journey to discover his personal legend and the meaning of life. Through his travels, he learns profound lessons about fate, destiny, and the importance of following one’s dreams."  
   },
+  
   {
     "id": 13,
-    "title": "The Picture of Dorian Gray",
-    "author": "Oscar Wilde",
-    "genre": "Gothic",
-    "pages": "254",
-    "rating": "4.2",
-    "publicationyear": "1890",
-    "audience": "Adults",
-    "imagepath": "assets/thepictureofdoriangray.jpeg",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Classic",
+    "pages": "277",
+    "rating": "4.0",
+    "publicationyear": "1951",
+    "audience": "Young Adults, Adults",
+    "imagepath": "assets/thecatcherinthe Rye.jpg",
     "status": "available",
-    "summary":"summary" 
+    "summary": "The novel follows Holden Caulfield, a disenchanted teenager who has been expelled from prep school. As he wanders New York City, Holden grapples with the adult world, identity, and his desire to protect the innocence of children."
   },
   {
     "id": 14,
-    "title": "The Night Circus",
-    "author": "Erin Morgenstern",
-    "genre": "Fantasy",
-    "pages": "387",
-    "rating": "4.4",
-    "publicationyear": "2011",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "pages": "311",
+    "rating": "4.6",
+    "publicationyear": "1932",
     "audience": "Adults",
-    "imagepath": "assets/thenightcircus.jpeg",
+    "imagepath": "assets/bravenewworld.jpg",
     "status": "available",
-    "summary":"summary"
+    "summary": "'Brave New World' depicts a futuristic society where human beings are engineered in hatcheries, conditioned for specific roles, and kept in line through a drug that dulls emotions. The novel explores themes of social control, technology, and individual freedom."
   },
   {
     "id": 15,
-    "title": "The Secret Garden",
-    "author": "Frances Hodgson Burnett",
-    "genre": "Children's Literature",
-    "pages": "331",
-    "rating": "4.6",
-    "publicationyear": "1911",
-    "audience": "Children, Young Adults",
-    "imagepath": "images/thesecretgarden.jpeg",
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "genre": "Psychological Fiction",
+    "pages": "430",
+    "rating": "4.3",
+    "publicationyear": "1866",
+    "audience": "Adults",
+    "imagepath": "assets/crimeandpunishment.jpg",
     "status": "available",
-    "summary":"summary"  
+    "summary": "The novel follows Rodion Raskolnikov, a young student who believes that certain people are above moral laws. After committing a crime, he struggles with guilt, madness, and the consequences of his actions, grappling with deep philosophical questions of morality."
   },
   {
     "id": 16,
@@ -205,7 +206,7 @@
     "audience": "Adults",
     "imagepath": "assets/thedavincicode.jpg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"A gripping thriller that follows Robert Langdon, a Harvard symbologist, as he uncovers a trail of cryptic puzzles tied to the secrets of the Catholic Church. As he tries to solve the mystery of a murder in the Louvre, Langdon discovers a conspiracy that spans centuries."  
   },
   {
     "id": 17,
@@ -218,7 +219,7 @@
     "audience": "Adults, Young Adults",
     "imagepath": "assets/tokillamockingbird.jpg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"Set in the 1930s South, this novel follows Scout Finch, a young girl, as she learns about racism, injustice, and compassion through her father, Atticus Finch, a lawyer defending a black man accused of raping a white woman."  
   },
   {
     "id": 18,
@@ -231,7 +232,7 @@
     "audience": "Young Adults",
     "imagepath": "assets/oneofusislying.jpeg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"Five students walk into detention, but only four walk out alive. As the story unfolds, secrets, lies, and betrayals emerge among the four remaining suspects, each with a motive to murder the student who died."  
   },
   {
     "id": 19,
@@ -244,7 +245,7 @@
     "audience": "Children, Young Adults",
     "imagepath": "assets/harrypotterandphilosophersstone.jpg",
     "status": "available",
-    "summary":"summary" 
+    "summary":"A young boy, Harry Potter, discovers that he is a wizard and attends the Hogwarts School of Witchcraft and Wizardry. Along with his friends, he uncovers the mystery surrounding his parents’ death and a dark force that threatens the wizarding world." 
   },
   {
     "id": 20,
@@ -257,7 +258,7 @@
     "audience": "Adults, Young Adults",
     "imagepath": "assets/littlewomen.jpg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"This heartwarming tale follows the lives of the four March sisters—Meg, Jo, Beth, and Amy—as they navigate their coming-of-age journey during the American Civil War, focusing on family, love, loss, and dreams of the future."  
   },
   {
     "id": 21,
@@ -270,7 +271,7 @@
     "audience": "Adults, Young Adults",
     "imagepath": "assets/greatexpectations.webp",
     "status": "available",
-    "summary":"summary"  
+    "summary":"This heartwarming tale follows the lives of the four March sisters—Meg, Jo, Beth, and Amy—as they navigate their coming-of-age journey during the American Civil War, focusing on family, love, loss, and dreams of the future."  
   },
   {
     "id": 22,
@@ -283,7 +284,7 @@
     "audience": "Young Adults, Adults",
     "imagepath": "assets/lordoftheflies.jpg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"A group of boys stranded on an uninhabited island descend into savagery as their attempts at civilization collapse. The novel explores the darkness of human nature and the consequences of the breakdown of social order."  
   },
   {
     "id": 23,
@@ -296,7 +297,7 @@
     "audience": "Adults, Young Adults",
     "imagepath": "assets/midsummernightsdream.jpeg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"A whimsical comedy where love, magic, and mischief intertwine in a magical forest. The play follows four Athenian lovers and a group of actors who are manipulated by fairies, resulting in a series of humorous misunderstandings and transformations."  
   },
   {
     "id": 24,
@@ -309,7 +310,7 @@
     "audience": "Adults",
     "imagepath": "assets/othello.jpeg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"Othello, a Moorish general in the Venetian army, is manipulated by his envious ensign, Iago, who plants seeds of doubt in Othello's mind about his wife Desdemona’s fidelity, leading to tragic consequences."  
   },
   {
     "id": 25,
@@ -322,7 +323,7 @@
     "audience": "Children, Adults",
     "imagepath": "assets/thelittleprince.webp",
     "status": "available",
-    "summary":"summary" 
+    "summary":"A young prince travels from planet to planet, meeting various inhabitants who impart lessons on life and love. Through his journey, he learns that the most important things are invisible to the eyes and only understood through the heart." 
   },
   {
     "id": 26,
@@ -335,7 +336,7 @@
     "audience": "Young Adults, Adults",
     "imagepath": "assets/diaryofannefrank.jpeg",
     "status": "available",
-    "summary":"summary"  
+    "summary":" Four siblings are transported to the magical land of Narnia, where they meet the noble lion Aslan and join the fight against the evil White Witch. The novel is an allegory of good versus evil and a tale of bravery, friendship, and redemption."  
   },
   {
     "id": 27,
@@ -348,7 +349,7 @@
     "audience": "Adults, Young Adults",
     "imagepath": "assets/janeeyre.jpg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"Jane Eyre, an orphan, rises from a harsh childhood to become a governess at Thornfield Hall. There, she falls in love with the enigmatic Mr. Rochester, but dark secrets threaten to tear them apart."  
   },
   {
     "id": 28,
@@ -361,7 +362,7 @@
     "audience": "Adults",
     "imagepath": "assets/dracula.jpeg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"The Gothic horror novel tells the tale of Count Dracula’s attempt to move from Transylvania to England to spread the undead curse. It follows a group of characters as they try to stop him, exploring themes of sexuality, fear, and evil."  
   },
   {
     "id": 29,
@@ -374,7 +375,7 @@
     "audience": "Children, Young Adults",
     "imagepath": "assets/aliceinwonderland.jpeg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"Alice, a curious young girl, falls through a rabbit hole into a fantastical world where she meets a variety of eccentric characters. Her adventures challenge logic and reason, and the story is a delightful exploration of imagination."  
   },
   {
     "id": 30,
@@ -387,7 +388,7 @@
     "audience": "Adults",
     "imagepath": "assets/warandpeace.jpeg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"A sweeping historical novel set against the backdrop of Napoleon’s invasion of Russia, it follows the lives of several aristocratic families as they navigate the personal and political turmoil of the era. Themes of fate, free will, and love are explored."  
   },
   {
     "id": 31,
@@ -400,7 +401,7 @@
     "audience": "Adults",
     "imagepath": "assets/catch22.jpeg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"This darkly comedic novel tells the story of Captain John Yossarian, a World War II bombardier, who becomes desperate to escape the war. The absurdity of military bureaucracy and the paradox of the Catch-22 rule (that soldiers who want to be grounded are considered sane and must fly) form the heart of this critique of war and authority."  
   },
   {
     "id": 32,
@@ -413,7 +414,7 @@
     "audience": "Children, Young Adults",
     "imagepath": "assets/peterpan.webp",
     "status": "available",
-    "summary":"summary"  
+    "summary":"Peter Pan, the mischievous boy who never grows up, takes Wendy Darling and her brothers on a magical adventure to Neverland, where they battle pirates and encounter fairies. It’s a story of adventure, imagination, and the joy of childhood innocence."  
   },
   {
     "id": 33,
@@ -426,7 +427,7 @@
     "audience": "Adults",
     "imagepath": "assets/bravenewworld.jpg",
     "status": "available",
-    "summary":"summary"  
+    "summary":"The novel imagines a future where people are artificially produced and conditioned for their roles in society. It explores the loss of individuality in a world that prioritizes stability and happiness at any cost."  
   },
   {
     "id": 34,
@@ -452,7 +453,7 @@
     "audience": "Adults",
     "imagepath": "assets/gameofthrones.webp",
     "status": "available",
-    "summary":"summary"
+    "summary":"In a brutal medieval fantasy world, noble families vie for control of the Iron Throne of the Seven Kingdoms. Betrayal, alliances, and dangerous political intrigue drive the plot, with the looming threat of winter and the supernatural dangers beyond the Wall."
   },
   {
     "id": 36,
@@ -465,7 +466,7 @@
     "audience": "Adults",
     "imagepath": "assets/shining.jpg",
     "status": "available",
-    "summary":"summary"
+    "summary":"Jack Torrance, a writer with a troubled past, accepts a job as the winter caretaker of the isolated Overlook Hotel. As the harsh winter sets in, Jack's sanity deteriorates under the influence of supernatural forces, putting his wife and son at risk."
   },
   {
     "id": 37,
@@ -478,7 +479,7 @@
     "audience": "Children, Young Adults",
     "imagepath": "assets/chroniclesofnarnia.jpg",
     "status": "available",
-    "summary":"summary"
+    "summary":"Four siblings are transported to the magical land of Narnia, where they meet the noble lion Aslan and join the fight against the evil White Witch. The novel is an allegory of good versus evil and a tale of bravery, friendship, and redemption."
   }
 
 
