@@ -3,7 +3,65 @@ from config import app, db
 from models import Book, Author, Genre
 import json
 from sqlalchemy import func 
-    
+
+""" @app.route("/add-rating", methods=["POST"])
+def rate_book():
+    new_rating = 0
+    book='book entered by user'
+    rating=Book.query.get("rating")
+    new_rating = (rating+userrating) // 2
+    Book.rating= new_rating
+    db.session.commit()  """
+
+@app.route("/edit-book", methods=["PATCH"])
+def edit_book():
+    id = request.form.get("id")
+    book = Book.query.get(int(id))
+    title = request.form.get("title")
+    author = request.form.get("author")
+    genre = request.form.get("genre")
+    pages = request.form.get("pages")
+    rating = request.form.get("rating")
+    publicationyear = request.form.get("publicationyear")
+    audience = request.form.get("audience")
+    imagepath = request.form.get("imagepath")
+    status = request.form.get("status")
+    summary = request.form.get("summary")
+
+    if title:
+        book.title = title
+    if author:
+        author_set = Author.query.filter_by(name=author).first()
+        if not author_set:
+            author_set = Author(name=author)
+            db.session.add(author_set)
+            db.session.commit()
+        book.author = author_set
+    if genre:
+        genre_set = Genre.query.filter_by(genre=genre).first()
+        if not genre_set:
+            genre_set = Genre(genre=genre, description="sample description")
+            db.session.add(genre_set)
+            db.session.commit()
+        book.genre = genre_set
+    if pages:
+        book.pages = pages
+    if rating:
+        book.rating = rating
+    if publicationyear:
+        book.publicationyear = publicationyear
+    if audience:
+        book.audience = audience
+    if imagepath:
+        book.imagepath = imagepath
+    if status:
+        book.status = status
+    if summary:
+        book.summary = summary
+
+    db.session.commit()
+    return jsonify({"message": f"Book with id {id} updated successfully!"}), 200
+
 @app.route("/add-book", methods=["POST"])
 def add_book():
     print("Incoming form data:", request.form)
@@ -213,6 +271,9 @@ def get_borrowed_books():
 
 @app.route("/", methods=["GET"]) #sort out adding authors and adding books
 def view_books():
+    db.session.query(Book).delete()  # Deletes all books
+    db.session.commit()
+
     with open('/Users/amrit/Desktop/MyCode/Backend /books.json', 'r') as file:
         data = json.load(file)
 
