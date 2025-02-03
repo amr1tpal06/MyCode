@@ -4,14 +4,20 @@ from models import Book, Author, Genre
 import json
 from sqlalchemy import func 
 
-""" @app.route("/add-rating", methods=["POST"])
+from flask import request, jsonify
+
+@app.route("/add-rating", methods=["POST"])
 def rate_book():
-    new_rating = 0
-    book='book entered by user'
-    rating=Book.query.get("rating")
-    new_rating = (rating+userrating) // 2
-    Book.rating= new_rating
-    db.session.commit()  """
+    book_id = request.form.get("book_id") 
+    user_rating = request.form.get("rating")  
+    book = Book.query.get(int(book_id))  
+    user_rating = float(user_rating) 
+    current_rating = float(book.rating)
+    new_rating = (current_rating + user_rating) / 2  
+    book.rating = round(new_rating, 2) 
+
+    db.session.commit()
+    return jsonify({"message": f"Rating updated to {book.rating} for book {book.title}"}), 200
 
 @app.route("/edit-book", methods=["PATCH"])
 def edit_book():
