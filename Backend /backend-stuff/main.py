@@ -3,6 +3,7 @@ from config import app, db
 from models import Book, Author, Genre
 import json
 from sqlalchemy import func 
+import os
 
 from flask import request, jsonify
 
@@ -280,7 +281,15 @@ def view_books():
     db.session.query(Book).delete()  # Deletes all books
     db.session.commit()
 
-    with open('/Users/amrit/Desktop/MyCode/Backend /books.json', 'r') as file:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Move up one level to get the Backend directory
+    backend_dir = os.path.dirname(script_dir)
+
+    # Construct the correct path to books.json
+    file_path = os.path.join(backend_dir, "books.json")
+
+    with open(file_path, 'r') as file:
         data = json.load(file)
 
     author_data = data["authors"]
